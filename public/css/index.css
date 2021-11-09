@@ -1,36 +1,91 @@
-html{
+html {
   font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
   background-color: black;
   margin: 0;
   padding: 20px 50px 0 50px;
+  overflow-x: hidden;
 }
 
 nav {
   /*background-color: darkgrey;*/
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: 0 0 0 20px;
 }
 
-.menu-flex-item:first-of-type {
-  box-sizing: border-box;
-  width: 45%;
+nav ul {
+  list-style: none;
 }
 
-.menu-flex-item:nth-of-type(2) {
-  width: 20%;
+.menu-flex-item {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.parte-logo {
+  display: inline-block;
 }
 
 .menu-navegacao {
+  /*
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  */
   list-style: none;
   padding: 0;
   width: 100%;
+}
+
+.titulo-artigo {
+  cursor: pointer;
+  width: 50%;
+  font-size: 6rem;
+}
+
+.titulo-artigo:first-of-type {
+  margin-right: 50%;
+  transform: translate(-10%, 0);
+}
+
+.titulo-artigo:last-of-type {
+  margin-left: 50%;
+  transform: translate(10%, -27%);
+  transition: transform 3s;
+}
+
+.lista-subtitulos {
+  display: none;
+  font-size: 1.5rem;
+  position: absolute;
+}
+
+.lista-subtitulos:first-of-type {
+  bottom: 800px;
+  transition: bottom 3s;
+}
+
+.lista-subtitulos:last-of-type {
+  bottom: -70%;
+  right: 20%;
+  transition: bottom 3s;
+}
+
+.subtitulo-artigo {
+  cursor: pointer;
+}
+
+#artigo1{
+  color: white;
+  right: 0;
+  padding: 0 10% 0 10%;
+  position: absolute;
+  width: 50%;
+}
+
+#artigo1Introducao img{
+  width: 20%;
+  height: auto;
 }
