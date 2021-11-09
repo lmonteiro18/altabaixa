@@ -1,0 +1,36 @@
+html{
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  background-color: black;
+  margin: 0;
+  padding: 20px 50px 0 50px;
+}
+
+nav {
+  /*background-color: darkgrey;*/
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0 0 20px;
+}
+
+.menu-flex-item:first-of-type {
+  box-sizing: border-box;
+  width: 45%;
+}
+
+.menu-flex-item:nth-of-type(2) {
+  width: 20%;
+}
+
+.menu-navegacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
