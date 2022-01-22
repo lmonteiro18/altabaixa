@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Pro';
+    src: url('NHaasGroteskDSPro-75Bd.woff2') format('woff2'),
+        url('NHaasGroteskDSPro-75Bd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Pro Lt';
+    src: url('NHaasGroteskDSPro-45Lt.woff2') format('woff2'),
+        url('NHaasGroteskDSPro-45Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Pro';
+    src: url('NHaasGroteskDSPro-55Rg.woff2') format('woff2'),
+        url('NHaasGroteskDSPro-55Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Pro Md';
+    src: url('NHaasGroteskDSPro-65Md.woff2') format('woff2'),
+        url('NHaasGroteskDSPro-65Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

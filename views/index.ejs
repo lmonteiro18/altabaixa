@@ -5,74 +5,369 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Alta Baixa</title>
 
+  <!-- FONTS -->
+  <!-- Neue Haas Grotesk -->
+  <link rel="stylesheet" type="text/css" href="/fonts/transfonter.org-20220121-142102/stylesheet.css">
+  <!-- Mermaid -->
+  <link rel="stylesheet" type="text/css" href="/fonts/webfontkit-20220121-090457/stylesheet.css">
+  <!-- Courier -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="/css/index.css">
 
+  <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+  <title>Alta Baixa</title>
 </head>
 
 <body>
   <header>
+    <!-- ///////////////////////////////////// NAVEGAÇÃO ///////////////////////////////////// -->
     <nav>
       <div class="menu-flex-item">
-        <p class="parte-logo">alta</p>
-        <p class="parte-logo">baixa</p>
+        <img id="Logo" src="" width="" height="" />
+        <div id="LogoAnimation"></div>
       </div>
       <div class="menu-flex-item">
-        <ul class="menu-navegacao">
-          <li class="titulo-artigo">Thirteen Ways of Looking at a Typeface</li>
-          <ul class="lista-subtitulos">
-            <li class="subtitulo-artigo">Because it works</li>
-            <li class="subtitulo-artigo">Because you like it's history</li>
-            <li class="subtitulo-artigo">Because you like its name</li>
-            <li class="subtitulo-artigo">Because of who designed it</li>
-            <li class="subtitulo-artigo">Because it was there</li>
-            <li class="subtitulo-artigo">Because they made</li>
-            <li class="subtitulo-artigo">Because it reminds you of something</li>
-            <li class="subtitulo-artigo">Because it's beautiful'</li>
-            <li class="subtitulo-artigo">Because it's ugly</li>
-            <li class="subtitulo-artigo">Because it's boring'</li>
-            <li class="subtitulo-artigo">Because you believe in it</li>
-            <li class="subtitulo-artigo">Because you can't not</li>
-          </ul>
-          <li class="titulo-artigo">typEm - Adapting a Typeface to Text Emotions</li>
-          <ul class="lista-subtitulos">
-            <li class="subtitulo-artigo">Emotional Extraction</li>
-            <li class="subtitulo-artigo">Typeface Design Workflow</li>
-            <li class="subtitulo-artigo">Positive and Negative Valences</li>
-            <li class="subtitulo-artigo">The 6 Emotional Types</li>
-            <li class="subtitulo-artigo">The Application</li>
-          </ul>
-        </ul>
+        <!--<button class="botao-navegacao">Thirteen Ways of Looking at a Typeface</button>-->
+        <button class="botao-navegacao">Artigo 1</button>
+      </div>
+      <div class="menu-flex-item">
+        <!--<button class="botao-navegacao">typEm - Adapting a Typeface to Text Emotions</button>-->
+        <button class="botao-navegacao">Artigo 2</button>
       </div>
     </nav>
   </header>
 
-  <div id="artigo1">
-    <div id="artigo1Introducao">
-      <img src="assets/images/imagens_revista-01.png" width="1667" height="2055" alt="Michael Bierut">
-      <p>For the first ten years of my career, I worked for Massimo Vignelli, a designer who is legendary for using a very limited number of typefaces. Between 1980 and 1990, most of my projects were set in five fonts: Helvetica (naturally), Futura,
-        Garamond No. 3, Century Expanded, and, of course, Bodoni.
-        <br>
-        <br>
-        For Massimo, this was an ideological choice, an ethical imperative. "In the new computer age," he once wrote, "the proliferation of typefaces and type manipulations represents a new level of visual pollution threatening our culture. Out of
-        thousands of typefaces, all we need are a few basic ones, and trash the rest." For me, it became a time-saving device. Why spend hours choosing between Bembo, Sabon and Garamond No. 3 every time you needed a Venetian Roman? For most people —
-        my mom, for instance — these were distinctions without differences. Why not just commit to Garamond No. 3 and never think about it again? My Catholic school education must have well prepared me for this kind of moral clarity. I accepted it
-        gratefully.
-        <br>
-        <br>
-        Then, after a decade, I left my first job. Suddenly I could use any typeface I wanted, and I went nuts. On one of my first projects, I used 37 different fonts on 16 pages. My wife, who had attended Catholic school herself, found this all too
-        familiar. She remembered classmates who had switched to public school after eight years under the nuns: freed at last from demure plaid uniforms, they wore the shortest skirts they could find. "Jesus," she said, looking at one of my multiple
-        font demolition derbies. "You've become a real slut, haven't you?"
-        <br>
-        <br>
-        It was true. Liberated from monogamy, I became typographically promiscuous. I have since, I think, learned to modulate my behavior — like any substance abuser, I learned that binges are time-consuming, costly, and ultimately counterproductive
-        — but I've never gone back to five-typeface sobriety. Those thousands of typefaces are still out there, but my recovery has required that I become more discriminating and come up with some answers to this seemingly simple question: why choose
-        a particular typeface? Here are thirteen reasons.
-      </p>
-    </div>
-  </div>
+  <main>
+    <!-- ///////////////////////////////////// ARTIGO 1 ///////////////////////////////////// -->
+    <article class="artigo">
+      <div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because you can't not</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because you believe in it</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it's special</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it's boring</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it's ugly</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it's beautiful</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it reminds you of something</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because they made you</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it was there</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because of who designed it</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because you like its name</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because you like its history</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo1-parte-titulo">Because it works</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h1 class="artigo1-titulo">Thirteen Ways of Looking at a Typeface</h1>
+        </div>
+      </div>
+      <div>
+        <section class="artigo1-introducao">
+          <img src="assets/images/michaelBierut_grayscale_editada2.png" width="1667" height="2055" alt="Michael Bierut">
+          <p>For the first ten years of my career, I worked for Massimo Vignelli, a designer who is legendary for using a very limited number of typefaces. Between 1980 and 1990, most of my projects were set in five fonts: Helvetica (naturally),
+            Futura,
+            Garamond No. 3, Century Expanded, and, of course, Bodoni.
+            <br>
+            <br>
+            For Massimo, this was an ideological choice, an ethical imperative. "In the new computer age," he once wrote, "the proliferation of typefaces and type manipulations represents a new level of visual pollution threatening our culture. Out
+            of
+            thousands of typefaces, all we need are a few basic ones, and trash the rest." For me, it became a time-saving device. Why spend hours choosing between Bembo, Sabon and Garamond No. 3 every time you needed a Venetian Roman? For most
+            people
+            —
+            my mom, for instance — these were distinctions without differences. Why not just commit to Garamond No. 3 and never think about it again? My Catholic school education must have well prepared me for this kind of moral clarity. I accepted
+            it
+            gratefully.
+            <br>
+            <br>
+            Then, after a decade, I left my first job. Suddenly I could use any typeface I wanted, and I went nuts. On one of my first projects, I used 37 different fonts on 16 pages. My wife, who had attended Catholic school herself, found this
+            all
+            too
+            familiar. She remembered classmates who had switched to public school after eight years under the nuns: freed at last from demure plaid uniforms, they wore the shortest skirts they could find. "Jesus," she said, looking at one of my
+            multiple
+            font demolition derbies. "You've become a real slut, haven't you?"
+            <br>
+            <br>
+            It was true. Liberated from monogamy, I became typographically promiscuous. I have since, I think, learned to modulate my behavior — like any substance abuser, I learned that binges are time-consuming, costly, and ultimately
+            counterproductive
+            — but I've never gone back to five-typeface sobriety. Those thousands of typefaces are still out there, but my recovery has required that I become more discriminating and come up with some answers to this seemingly simple question: why
+            choose
+            a particular typeface? Here are thirteen reasons.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/franklin_gothic.png" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Some typefaces are just perfect for certain things. I've specified exotic fonts for identity programs that work beautifully in headlines and even in text, but sooner or later you have to set that really tiny type
+            at the bottom of the business reply card. This is what Franklin Gothic is for. Careful, though: some typefaces work too well. Frutiger has been used so much for signage programs in hospitals and airports that seeing it now makes me feel
+            that
+            I'm about to get diagnosed with a brain tumor or miss the 7:00 to O'Hare.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/eurostyle.png" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            I've heard of several projects where the designer found a font that was created the same year the client's organization was founded. This must give the recommendation an aura of manifest destiny that is positively irresistible. I
+            haven't
+            had
+            that luck yet, but still try to find the same kind of evocative alignment. For instance, I was never a fan of Aldo Novarese's Eurostyle, but I came to love it while working on a monograph on Eero Saarinen: they both share an
+            expressiveness
+            peculiar to the postwar optimism of the 1950's.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Once I saw a project in a student portfolio that undertook the dubious challenge of redesigning the Tiffany's identity. I particularly disliked the font that was used, and I politely asked what it was. "Oh," came the enthusiastic
+            response,
+            "that's the best part! It's called Tiffany!" On the other hand, Bruce Mau designed Spectacle, the book he created with David Rockwell, using the typeface Rockwell. I thought this was funny.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Once I was working on a project where the client group included some very strong-minded architects. I picked Cheltenham, an idiosyncratic typeface that was not only well-suited to the project's requirements, but was one of the few I
+            know
+            that
+            was designed by an architect, Bertram Goodhue. Recently, I designed a publications program for a girls' school. I used a typeface that was designed by a woman and named after another, Zuzana Licko's Mrs. Eaves. In both cases, my clients
+            knew
+            that the public would be completely unaware of the story behind the font selection, but took some comfort in it nonetheless. I did too.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Sometimes a typeface is already living on the premises when you show up, and it just seems mean to evict it. "We use Baskerville and Univers 65 on all our materials, but feel free to make an alternate suggestion." Really? Why bother?
+            It's
+            like one of those shows where the amateur chef is given a turnip, a bag of flour, a leg of lamb and some maple syrup and told to make a dish out of it. Sometimes it's something you've never used before, which makes it even more fun.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            And sometimes it's something you've never used before, for good reason. "We use ITC Eras on all our materials." "Can I make an alternate suggestion?" "No." This is when blind embossing comes in handy.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Whenever I want to make words look straightforward, conversational, and smart, I frequently consider Futura, upper and lower case. Why? Not because Paul Renner was straightforward, conversational, and smart, although he might have been.
+            No,
+            it's because 45 years ago, Helmut Krone decided to use Futura in Doyle Dane Bernbach's advertising for Volkswagen, and they still use it today. One warning, however: what reminds you of something may remind someone else of something
+            else.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Cyrus Highsmith's Novia is now commercially available. He originally designed it for the headlines in Martha Stewart Weddings. Resistance is futile, at least mine is.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            About 10 years ago, I was asked to redesign the logo for New York magazine. Milton Glaser had based the logo on Bookman Swash Italic, a typeface I found unimaginably dated and ugly. But Glaser's logo had replaced an earlier one by Peter
+            Palazzo that was based on Caslon Italic. I proposed we return to Caslon, and distinctly remember saying, "Bookman Swash Italic is always going to look ugly." The other day, I saw something in the office that really caught my eye. It was
+            set
+            in Bookman Swash Italic, and it looked great. Ugly, but great.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Tibor Kalman was fascinated with boring typefaces. "No, this one is too clever, this one is too interesting," he kept saying when showed him the fonts I was proposing for his monograph. Anything but a boring typeface, he felt, got in
+            the
+            way
+            of the ideas. We settled on Trade Gothic.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            In design as in fashion, nothing beats bespoke tailoring. I've commissioned custom typefaces from Jonathan Hoefler and Tobias Frere-Jones and Joe Finocchiaro, and we're currently working with Matthew Carter and Chester. It is the
+            ultimate
+            indulgence, but well worth the extra effort. Is this proliferation? I say bring it on.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Sometimes I think that Massimo Vignelli may be using too many typefaces, not too few. A true fundamentalist requires a monotheistic worldview: one world, one typeface. The designers at Experimental Jetset have made the case for
+            Helvetica.
+            My
+            partner Abbott Miller had a period of life he calls "The Scala Years" when he used that typeface almost exclusively. When the time is right, I might make that kind of commitment myself.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <img class="artigo1-parte-imagem" src="assets/images/" width="" height="" alt="">
+          <p class="artigo1-parte-texto">
+            Princeton Architectural Press is about to publish a collection of essays I've written, many of which first appeared here on Design Observer. I wanted it to feel like a real book for readers — it has no pictures — so I asked Abbott to
+            design
+            it. He suggested we set each one of the 79 pieces in a different typeface. I loved this idea, but wasn't sure how far he'd want to go with it. "What about the one called 'I Hate ITC Garamond?'" I asked him. "Would we set it in ITC
+            Garamond?"
+            He looked at me as if I was crazy. "Of course," he said.
+          </p>
+        </section>
+        <section class="artigo1-parte">
+          <p class="artigo1-parte-texto">
+            The book is beautiful, by the way, and not the least bit slutty.
+          </p>
+        </section>
+
+      </div>
+    </article>
+
+
+    <!-- ///////////////////////////////////// ARTIGO 2 ///////////////////////////////////// -->
+    <article class="artigo">
+      <div>
+        <div class="flex-container-titles">
+          <h2 class="artigo2-parte-titulo">The Application</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo2-parte-titulo">The 6 Emotional Types</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo2-parte-titulo">Positive and Negative Valences</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo2-parte-titulo">Typeface design workflow</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h2 class="artigo2-parte-titulo">Emotion Extraction</h2>
+        </div>
+        <div class="flex-container-titles">
+          <h1 class="artigo2-titulo">typEm - Adapting a Typeface to Text Emotions</h1>
+        </div>
+      </div>
+      <div>
+        <section class="artigo2-introducao">
+          <img src="assets/images/" width="" height="" alt="">
+          <p>The introduction of programmatic concepts brought to typography new experiments, concepts, and the possibility to create generative typefaces, capable of adapting to different contexts. This work aims to explore these new creative
+            possibilities in the field of type design. Through the implementation of a generative system, we created a typeface that adapts its shape to the sentiments expressed in a text. In this project, we used the emotional values of each
+            sentence
+            of a given text to deform the typographic glyphs to represent those emotional values. Additionally, and to enable the user to interact with the system, we implemented an application which receives a text as input and, as output, exports
+            the
+            input text composed with our generative typeface.
+          </p>
+        </section>
+        <section class="artigo2-parte">
+          <p class="artigo2-parte-texto">
+            To obtain the emotions present in the text, we used an external Java library called Synesketch. The classification of the emotions of Synesketch is based on Paul Ekman’s research. From his studies, Ekman defined 6 emotions which could be
+            expressed and detected by facial expressions. These 6 emotions can also be extracted from the text: happiness, sadness, anger, fear, disgust, and surprise. To do so, Synesketch uses a method based on the detection of keywords within the
+            text and the application of heuristic rules from dictionaries based on WordNet, emotions, and common abbreviations. For every analysed text, Synesketch returns the weight values for the 6 emotions, the valence (positive or negative), and
+            a
+            general weight value. These weights represent the intensity of an emotion and vary between 0, not intense, and 1, very intense.
+          </p>
+        </section>
+        <section class="artigo2-parte">
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 1</b>
+              <br />
+              Different phases of the glyph construction: (i) skeleton; (ii) base points; (iii) additional equidistant points; (iv) new points; (v) their connection; and (vi) the final glyph.
+            </figcaption>
+          </figure>
+          <p class="artigo2-parte-texto">
+            To represent the text’s emotion we apply the following workflow: (i) we divide the text by sentence; (ii) we detect the emotions and valences present in the sentence with the Synesketch library; (iii) we morph the typographic glyphs used
+            in
+            each word, to represent the corresponding valence or emotion; (iv) we compose the text with the resulting glyphs; and (v) we generate a typeface which represents the general emotion described in the text. We opted to analyse each sentence
+            in the text independently because the same text can express several emotions. With this, as the emotions change throughout the text, the typeface adapts and also changes to represent the new emotion value.
+          </p>
+        </section>
+        <section class="artigo2-parte">
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 2</b>
+              <br />
+              Two approaches for the design of of ‘a’ glyphs of positive valences.
+            </figcaption>
+          </figure>
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 3</b>
+              <br />
+              Two approaches for the design of of ‘a’ glyphs of negative valences.
+            </figcaption>
+          </figure>
+          <p class="artigo2-parte-texto">
+            To comprehend how the typographic skeleton could be deformed to represent the emotions present in a text, we opted to use first the valence (positive or negative) and the general weight of the text. The valence takes two possible values,
+            1
+            for positive and 0 for negative. The general weight represents the intensity of a certain emotion or valence, ranging from 0, not very intense, to 1, very intense.
+          </p>
+        </section>
+        <section class="artigo2-parte">
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 4</b>
+              <br />
+              Variations of the ‘a’ glyph depending on the emotional value: sadness, disgust, surprise, rage, fear, and happiness, respectively.
+            </figcaption>
+          </figure>
+          <p class="artigo2-parte-texto">
+            We aimed to distinguish visually the 6 available emotions: happiness, fear, rage, sadness, disgust, and surprise. The concepts behind the shapes of the glyphs are based on the descriptions made by Darwin in “The expression of the emotions
+            in man and animals” about the reactions of the human being to the respective emotion — the way he/she express the emotion, through voice, gestures, or the reactions triggered by certain emotions.
+          </p>
+        </section>
+        <section class="artigo2-parte">
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 5</b>
+              <br />
+              Screenshots of the application. The introduction page (left) and the input page (right).
+            </figcaption>
+          </figure>
+          <figure class="artigo2-parte-figure">
+            <img src="assets/images/" width="" height="" alt="">
+            <figcaption>
+              <b>Figure 6</b>
+              <br />
+              Screenshots of the application. The text composition page (left) and the typeface page (right).
+            </figcaption>
+          </figure>
+          <p class="artigo2-parte-texto">
+            The main goal of the application is to guide the user in the creation of a text composed with the generative typeface. As input, the application receives a text, and as output, the application can export (i) a PDF file in which the
+            inserted
+            text is composed with the resulting glyphs and (ii) a typeface in the True Type Format (TTF), representing the overall emotion of the input text. A video exemplifying the interaction with the application can be seen <a
+              href="https://vimeo.com/74389105">here..</a>
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
 
   <%- include("partials/footer") -%>
