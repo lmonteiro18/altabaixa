@@ -1,50 +1,12 @@
 let open = false;
 
 let imagesDiv = document.querySelector(".artigo:first-child>div:nth-child(2)");
-//console.log(images);
-/*let checkOnce = [];
-let initialY = [];
-imagesDiv.forEach((img, i) => {
-  checkOnce[i] = false;
-});
-let vpHeight;*/
-//let distancesToTop_1 = ["0", "100vh", "200vh"];
-//let distancesToTop_2 = ["0", "100vh", ];
 
 let titlesDiv = document.querySelectorAll(".artigo>div:first-child");
 
 document.addEventListener("scroll", () => {
   let ratio = window.innerWidth / window.innerHeight;
   imagesDiv.style.transform = "translate(calc(50vw - " + (window.scrollY * ratio) + "px), 0)";
-  /*imagesDiv.forEach((img, i) => {
-    let enterViewport = i * window.innerHeight + window.innerHeight / 4;
-    let leaveViewport = i * window.innerHeight + 6.5 * window.innerHeight / 3;
-    let ratio = window.innerWidth / (leaveViewport - enterViewport);
-    if (window.scrollY >= enterViewport && window.scrollY <= leaveViewport) {
-      let translateValue = ratio * (window.scrollY - enterViewport) * 1.1;
-      img.style.transform = "translateX(calc(150% - " + translateValue + "px))";
-    }*/
-
-
-  /*if (open === true && i === 0) {
-    //console.log(window.scrollY);
-    //console.log("Index: " + i + " -> " + isInViewport(img));
-    if (checkOnce[i] === false) {
-      vpHeight = getViewportHeight(img);
-      isInViewport(img);
-      checkOnce[i] = true;
-      initialY[i] = window.scrollY;
-      console.log("InitialY: " + initialY);
-      //console.log(checkOnce);
-    }
-    let translateValue = (window.scrollY - initialY[i]) * ratio;
-    img.style.transform = "translateX(calc(50%-" + translateValue * 2 + "px))";
-    if (i === 0) {
-      console.log("Translate value: " + translateValue);
-      //console.log("Transform: " + img.style.transform);
-    }
-  }*/
-  //});
   titlesDiv.forEach((div, i) => {
     if (i === 0) {
       div.style.transform = "translateY(calc(-94% + " + window.scrollY * 2 + "px))";

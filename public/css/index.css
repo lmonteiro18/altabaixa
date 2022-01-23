@@ -207,7 +207,7 @@ main {
   z-index: -10;
 }
 
-.artigo:first-child>div:nth-child(2)>div{
+.artigo:first-child>div:nth-child(2)>div {
   width: 100vw;
 }
 
@@ -216,31 +216,31 @@ main {
   height: auto;
 }
 
-.artigo:first-child>div:nth-child(2)>div:first-child img{
+.artigo:first-child>div:nth-child(2)>div:first-child img {
   width: 35%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(2) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(2) .artigo1-parte-imagem {
   width: 25%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(3) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(3) .artigo1-parte-imagem {
   width: 25%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(4) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(4) .artigo1-parte-imagem {
   width: 35%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(5) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(5) .artigo1-parte-imagem {
   width: 35%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(6) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(6) .artigo1-parte-imagem {
   width: 35%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(7) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(7) .artigo1-parte-imagem {
   width: 45%;
 }
 
@@ -252,23 +252,23 @@ main {
   width: 20%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(10) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(10) .artigo1-parte-imagem {
   width: 45%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(11) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(11) .artigo1-parte-imagem {
   width: 30%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(12) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(12) .artigo1-parte-imagem {
   width: 20%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(13) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(13) .artigo1-parte-imagem {
   width: 45%;
 }
 
-.artigo:first-child>div:nth-child(2)>div:nth-child(14) .artigo1-parte-imagem{
+.artigo:first-child>div:nth-child(2)>div:nth-child(14) .artigo1-parte-imagem {
   width: 25%;
 }
 
@@ -296,32 +296,51 @@ section:nth-child(7) .artigo2-parte-figure>img {
   width: 100%;
 }
 
-@media screen and (max-width: 1280px){
-  p{
+@media screen and (max-width: 1280px) {
+  p {
     font-size: 1.25rem;
   }
 
-  .botao-navegacao{
+  .botao-navegacao {
     font-size: 1.4rem;
   }
 }
 
-@media screen and (max-width: 768px){
-  p{
-    font-size: 1.25rem;
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 1.5rem;
   }
 
-  .botao-navegacao{
+  .botao-navegacao {
     font-size: 2.25rem;
+  }
+
+  .artigo>div:first-child {
+    width: 60%;
+    z-index: -5;
+  }
+
+  .artigo>div:last-child {
+    width: 80%;
+  }
+
+  .artigo>div:last-child {
+    position: absolute;
+    right: 0;
   }
 }
 
-@media screen and (max-width: 480px){
-  p{
-    font-size: 1.25rem;
+@media screen and (max-width: 480px) {
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
-  .botao-navegacao{
+  p {
+    font-size: 1.75rem;
+  }
+
+  .botao-navegacao {
     font-size: 2.5rem;
   }
 }
