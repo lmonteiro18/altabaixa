@@ -1,13 +1,14 @@
 {
-  "name": "website_dotstudio",
+  "name": "alta_baixa_odc",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "author": "",
+  "author": "Luís Monteiro",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
