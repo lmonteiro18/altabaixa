@@ -96,7 +96,7 @@ p {
 
 .cursor p {
   position: absolute;
-  top: 25px;
+  top: 35px;
   width: 200px;
   text-align: center;
   transition: transform .5s ease;
@@ -409,6 +409,10 @@ figcaption {
 }
 
 @media screen and (max-width: 1280px) {
+  .cursor p {
+    top: 20px;
+  }
+
   p {
     font-size: 1.4rem;
   }
@@ -566,11 +570,11 @@ figcaption {
   }
 
   .botao-navegacao {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
 
   .menu-flex-item:last-child video {
-    width: 80%;
+    width: 70%;
   }
 
   .menu-flex-item:last-child p {

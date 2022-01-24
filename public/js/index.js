@@ -120,7 +120,7 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
     changeCursor("black");
     if (video.style.opacity === "0") {
       resetCursor("Now just scroll");
-    }else{
+    } else {
       resetCursor("Pick an article");
     }
   });
@@ -128,6 +128,9 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
     let titleDivs = document.querySelectorAll(".artigo>div:first-child");
     let textDivs = document.querySelectorAll(".artigo>div:last-child");
     if (!artigos[0].classList.contains("showArtigo") && !artigos[1].classList.contains("showArtigo")) {
+      if (actualVideo.style.transform === "translateY(-100vh)") {
+        togglePresentationVisibility();
+      }
       if (i === 0) {
         $(".artigo:first-child>div:nth-child(2)").animate({
           transform: "translate(50vw,0)"
