@@ -3,6 +3,10 @@ html {
   font-size: 1.1vw;
 }
 
+* {
+  cursor: none;
+}
+
 body {
   background-color: white;
   margin: 0;
@@ -36,6 +40,10 @@ header {
 nav {
   padding: 0 0 0 20px;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .smallHeader {
@@ -70,6 +78,28 @@ p {
   font-family: "NeueHaasGroteskDisp", sans-serif;
 }
 
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: 2px solid black;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  transition: border-color .5s ease, width .5s ease, height .5s ease;
+  display:flex;
+  justify-content: center;
+}
+
+.cursor p{
+  position: absolute;
+  top: 25px;
+  width: 200px;
+  text-align: center;
+}
+
 main {
   display: none;
   padding: 0;
@@ -97,28 +127,77 @@ main {
   transform: translateX(-35%);
 }
 
-.menu-flex-item:last-child {
+.menu-flex-item:nth-child(3) {
   top: 45vh;
   right: 0;
   transform: translateX(35%);
 }
 
+.menu-flex-item:last-child {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  z-index: -10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  transition: opacity 1s;
+}
+
+.menu-flex-item:last-child video {
+  width: 90%;
+  max-width: 500px;
+}
+
 .botao-navegacao {
+  position: relative;
   font-family: "Courier Prime", monospace;
   font-size: 1.5rem;
   background: none;
   border: none;
-  cursor: pointer;
+}
+
+@keyframes animacaoBotaoEsquerda {
+  0% {
+    bottom: -60vh;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes animacaoBotaoDireita {
+  0% {
+    top: -60vh;
+  }
+
+  100% {
+    top: 0;
+  }
 }
 
 .menu-flex-item:nth-child(2) .botao-navegacao {
   transform: rotateZ(90deg);
   text-align: center;
+  bottom: 0;
+  animation-name: animacaoBotaoEsquerda;
+  animation-duration: 4s;
+  animation-timing-function: ease;
 }
 
 .menu-flex-item:nth-child(3) .botao-navegacao {
   transform: rotateZ(-90deg);
   text-align: center;
+  top: 0;
+  animation-name: animacaoBotaoDireita;
+  animation-duration: 4s;
+  animation-timing-function: ease;
 }
 
 .artigo {
@@ -202,7 +281,7 @@ main {
   align-items: center;
   width: 1400vw;
   min-height: 100vh;
-  transform: translate(50vw, 0);
+  transform: translate(100vw, 0);
   opacity: 50%;
   z-index: -10;
 }
@@ -331,6 +410,14 @@ figcaption {
 }
 
 @media screen and (max-width: 768px) {
+  *{
+    cursor: auto;
+  }
+
+  .cursor {
+    display: none;
+  }
+
   .artigo:first-child>div:first-child {
     top: -100vh;
     transform: translateY(-95.5%);

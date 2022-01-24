@@ -1,4 +1,12 @@
-let open = false;
+let cursor = document.querySelector(".cursor");
+let cursorText = document.querySelector(".cursor p");
+
+window.addEventListener("mousemove", moveCursor);
+
+function moveCursor(e) {
+  cursor.style.top = e.pageY + "px";
+  cursor.style.left = e.pageX + "px";
+}
 
 let imagesDiv = document.querySelector(".artigo:first-child>div:nth-child(2)");
 
@@ -14,7 +22,7 @@ document.addEventListener("scroll", () => {
       } else {
         div.style.transform = "translateY(calc(-86% + " + window.scrollY * 2 + "px))";
       }
-    }else{
+    } else {
       if (i === 0) {
         div.style.transform = "translateY(calc(-95.5% + " + window.scrollY * 2 + "px))";
       } else {
@@ -29,14 +37,33 @@ let botoesNavegacao = document.getElementsByClassName('botao-navegacao');
 let artigos = document.getElementsByClassName('artigo');
 let main = document.querySelector('main');
 let header = document.querySelector('header');
+let video = document.querySelector('.menu-flex-item:last-child');
 
 
 for (let i = 0; i < botoesNavegacao.length; i++) {
+  botoesNavegacao[i].addEventListener("mouseover", () => {
+    cursor.style.borderColor = "#0AA3E4";
+    cursor.style.width = "2.5rem";
+    cursor.style.height = "2.5rem";
+  });
+  botoesNavegacao[i].addEventListener("mouseout", () => {
+    cursor.style.borderColor = "black";
+    cursor.style.width = "2rem";
+    cursor.style.height = "2rem";
+  });
   botoesNavegacao[i].addEventListener("click", () => {
     let titleDivs = document.querySelectorAll(".artigo>div:first-child");
     let textDivs = document.querySelectorAll(".artigo>div:last-child");
     if (!artigos[0].classList.contains("showArtigo") && !artigos[1].classList.contains("showArtigo")) {
+      if (i === 0) {
+        $(".artigo:first-child>div:nth-child(2)").animate({
+          transform: "translate(50vw,0)"
+        }, 1000);
+        imagesDiv.style.transform = "translate(50vw,0)";
+      }
       //abrir um artigo quando ambos estão fechados
+      video.style.opacity = "0";
+      cursorText.innerText = "Now just scroll";
       header.classList.add("smallHeader");
       main.classList.add("showMain");
       artigos[i].classList.add("showArtigo");
@@ -59,6 +86,10 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
         $(".artigo:first-child>div:first-child").animate({
           top: "-100vh"
         }, 1000);
+        $(".artigo:first-child>div:nth-child(2)").animate({
+          transform: "translate(100vw,0)"
+        }, 1000);
+        imagesDiv.style.transform = "translate(100vw,0)";
       } else {
         $(".artigo:last-child>div:first-child").animate({
           top: "-100vh"
@@ -70,6 +101,8 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
       setTimeout(() => artigos[i].classList.remove("showArtigo"), 1000);
       setTimeout(() => main.classList.remove("showMain"), 1000);
       header.classList.remove("smallHeader");
+      cursorText.innerText = "Pick an article";
+      video.style.opacity = "1";
     } else if (!artigos[i].classList.contains("showArtigo")) { //abrir um artigo com o seu botão e fechar o outro
       if (i === 0) {
         $(".artigo:last-child>div:first-child").animate({
@@ -89,6 +122,10 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
             top: "20vh"
           }, 1000);
           artigos[0].classList.add("showArtigo");
+          $(".artigo:first-child>div:nth-child(2)").animate({
+            transform: "translate(50vw,0)"
+          }, 1000);
+          imagesDiv.style.transform = "translate(50vw,0)";
           setTimeout(() => {
             titleDivs[0].style.top = "0";
             textDivs[0].style.top = "20vh";
@@ -101,6 +138,10 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
         $(".artigo:first-child>div:last-child").animate({
           top: "100vh"
         }, 1000);
+        $(".artigo:first-child>div:nth-child(2)").animate({
+          transform: "translate(100vw,0)"
+        }, 1000);
+        imagesDiv.style.transform = "translate(100vw,0)";
         artigos[0].classList.remove("showArtigo");
         setTimeout(() => {
           titleDivs[0].style.top = "-100vh";
