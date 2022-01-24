@@ -35,6 +35,7 @@ header {
   width: 100%;
   min-height: 100vh;
   transition: all 1s;
+  z-index: 0;
 }
 
 nav {
@@ -87,17 +88,18 @@ p {
   pointer-events: none;
   position: absolute;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 20;
   transition: border-color .5s ease, width .5s ease, height .5s ease;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
-.cursor p{
+.cursor p {
   position: absolute;
   top: 25px;
   width: 200px;
   text-align: center;
+  transition: transform .5s ease;
 }
 
 main {
@@ -122,15 +124,17 @@ main {
 }
 
 .menu-flex-item:nth-child(2) {
-  top: 45vh;
+  top: 48vh;
   left: 0;
   transform: translateX(-35%);
+  z-index: 10;
 }
 
 .menu-flex-item:nth-child(3) {
-  top: 45vh;
+  top: 48vh;
   right: 0;
   transform: translateX(35%);
+  z-index: 10;
 }
 
 .menu-flex-item:last-child {
@@ -141,7 +145,7 @@ main {
   align-items: center;
   text-align: center;
   margin: auto;
-  z-index: -10;
+  z-index: 2;
   width: 100%;
   top: 0;
   left: 0;
@@ -152,6 +156,19 @@ main {
 .menu-flex-item:last-child video {
   width: 90%;
   max-width: 500px;
+  transition: all 1s ease;
+}
+
+.menu-flex-item:last-child p {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 70%;
+  max-width: 700px;
+  font-size: 1.25rem;
+  transition: all 1s ease;
+  transform: translateY(100vh);
+  text-align: left;
 }
 
 .botao-navegacao {
@@ -400,6 +417,11 @@ figcaption {
     font-size: 2rem;
   }
 
+  .menu-flex-item:last-child p {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+
   figcaption {
     font-size: 1rem;
   }
@@ -410,12 +432,17 @@ figcaption {
 }
 
 @media screen and (max-width: 768px) {
-  *{
+  * {
     cursor: auto;
   }
 
   .cursor {
     display: none;
+  }
+
+  .menu-flex-item:last-child p {
+    font-size: 2.25rem;
+    width: 80%;
   }
 
   .artigo:first-child>div:first-child {
@@ -540,5 +567,13 @@ figcaption {
 
   .botao-navegacao {
     font-size: 3.5rem;
+  }
+
+  .menu-flex-item:last-child video {
+    width: 80%;
+  }
+
+  .menu-flex-item:last-child p {
+    font-size: 3rem;
   }
 }

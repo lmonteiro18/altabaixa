@@ -38,18 +38,91 @@ let artigos = document.getElementsByClassName('artigo');
 let main = document.querySelector('main');
 let header = document.querySelector('header');
 let video = document.querySelector('.menu-flex-item:last-child');
+let actualVideo = document.querySelector('.menu-flex-item:last-child video');
+let presentationText = document.querySelector('.menu-flex-item:last-child p');
+let showPresentation = false;
 
+function togglePresentationVisibility() {
+  showPresentation = !showPresentation;
+  if (showPresentation) {
+    presentationText.style.opacity = "1";
+    actualVideo.style.opacity = "0";
+    presentationText.style.transform = "translateY(0)";
+    actualVideo.style.transform = "translateY(-100vh)";
+  } else {
+    presentationText.style.opacity = "0";
+    actualVideo.style.opacity = "1";
+    presentationText.style.transform = "translateY(100vh)";
+    actualVideo.style.transform = "translateY(0)";
+  }
+}
+
+function changeCursor(color) {
+  if (color === "#0AA3E4") {
+    cursor.style.borderColor = color;
+    cursor.style.width = "2.5rem";
+    cursor.style.height = "2.5rem";
+  } else {
+    cursor.style.borderColor = color;
+    cursor.style.width = "2rem";
+    cursor.style.height = "2rem";
+  }
+}
+
+video.addEventListener("click", () => {
+  togglePresentationVisibility();
+});
+actualVideo.addEventListener("mouseover", () => {
+  changeCursor("#0AA3E4");
+  cursorText.innerText = "Click to show/hide presentation text";
+});
+actualVideo.addEventListener("mouseout", () => {
+  changeCursor("black");
+  if (video.style.opacity !== "0") {
+    cursorText.innerText = "Pick an article";
+  }
+});
+presentationText.addEventListener("mouseover", () => {
+  changeCursor("#0AA3E4");
+  cursorText.innerText = "Click to show/hide presentation text";
+});
+presentationText.addEventListener("mouseout", () => {
+  changeCursor("black");
+  if (video.style.opacity !== "0") {
+    cursorText.innerText = "Pick an article";
+  }
+});
+
+function showArticleName(i) {
+  if (i === 0) {
+    cursorText.innerText = "Thirteen Ways of Looking at a Typeface";
+    cursorText.style.transform = "translateX(60%)";
+    cursorText.style.textAlign = "left";
+  } else {
+    cursorText.innerText = "TypEm - Adapting a Typeface to Text Emotions";
+    cursorText.style.transform = "translateX(-60%)";
+    cursorText.style.textAlign = "right";
+  }
+}
+
+function resetCursor(text) {
+  cursorText.innerText = text;
+  cursorText.style.transform = "translateX(0)";
+  cursorText.style.textAlign = "center";
+}
 
 for (let i = 0; i < botoesNavegacao.length; i++) {
   botoesNavegacao[i].addEventListener("mouseover", () => {
-    cursor.style.borderColor = "#0AA3E4";
-    cursor.style.width = "2.5rem";
-    cursor.style.height = "2.5rem";
+    changeCursor("#0AA3E4");
+    showArticleName(i);
   });
   botoesNavegacao[i].addEventListener("mouseout", () => {
-    cursor.style.borderColor = "black";
-    cursor.style.width = "2rem";
-    cursor.style.height = "2rem";
+    changeCursor("black");
+    if (video.style.opacity === "0") {
+      resetCursor("Now just scroll");
+    }else{
+      resetCursor("Pick an article");
+    }
   });
   botoesNavegacao[i].addEventListener("click", () => {
     let titleDivs = document.querySelectorAll(".artigo>div:first-child");
@@ -63,7 +136,7 @@ for (let i = 0; i < botoesNavegacao.length; i++) {
       }
       //abrir um artigo quando ambos estão fechados
       video.style.opacity = "0";
-      cursorText.innerText = "Now just scroll";
+      //cursorText.innerText = "Now just scroll";
       header.classList.add("smallHeader");
       main.classList.add("showMain");
       artigos[i].classList.add("showArtigo");
