@@ -1,3 +1,9 @@
+let actualVideo = document.querySelector('.menu-flex-item:last-child video');
+
+window.onload = function(){
+  actualVideo.play();
+}
+
 let cursor = document.querySelector(".cursor");
 let cursorText = document.querySelector(".cursor p");
 
