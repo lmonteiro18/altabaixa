@@ -105,7 +105,7 @@ main {
 
 .botao-navegacao {
   font-family: "Courier Prime", monospace;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -272,8 +272,18 @@ main {
   width: 25%;
 }
 
+.artigo2-introducao img {
+  margin-bottom: 30px;
+  width: 75%;
+  align-self: center;
+  z-index: -10;
+}
+
 section figure {
-  margin: 0;
+  margin: 0 0 50px 0;
+  align-self: center;
+  width: 75%;
+  z-index: -10;
 }
 
 section:nth-child(3) .artigo2-parte-figure>img {
@@ -296,37 +306,138 @@ section:nth-child(7) .artigo2-parte-figure>img {
   width: 100%;
 }
 
+figcaption {
+  margin-top: 20px;
+  font-family: "NeueHaasGroteskDisp", sans-serif;
+  font-size: 0.7rem;
+}
+
 @media screen and (max-width: 1280px) {
   p {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
   }
 
   .botao-navegacao {
-    font-size: 1.4rem;
+    font-size: 2rem;
+  }
+
+  figcaption {
+    font-size: 1rem;
+  }
+
+  .artigo>div:last-child {
+    width: 45%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .artigo:first-child>div:first-child {
+    top: -100vh;
+    transform: translateY(-95.5%);
+  }
+
+  .artigo:last-child>div:first-child {
+    top: -100vh;
+    transform: translateY(-89%);
+  }
+
+  .artigo1-titulo {
+    font-size: 9rem;
+    opacity: 75%;
+  }
+
+  .artigo1-parte-titulo {
+    font-size: 8rem;
+    opacity: 75%;
+  }
+
+  .artigo2-titulo {
+    font-size: 9rem;
+    opacity: 75%;
+  }
+
+  .artigo2-parte-titulo {
+    font-size: 7.5rem;
+    opacity: 75%;
+  }
+
   p {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .botao-navegacao {
-    font-size: 2.25rem;
+    font-size: 3.5rem;
+  }
+
+  figcaption {
+    font-size: 2.2rem;
   }
 
   .artigo>div:first-child {
-    width: 60%;
+    width: 75%;
     z-index: -5;
   }
 
   .artigo>div:last-child {
-    width: 80%;
-  }
-
-  .artigo>div:last-child {
+    width: 85%;
     position: absolute;
     right: 0;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:first-child img {
+    width: 65%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(2) .artigo1-parte-imagem {
+    width: 65%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(3) .artigo1-parte-imagem {
+    width: 65%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(4) .artigo1-parte-imagem {
+    width: 75%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(5) .artigo1-parte-imagem {
+    width: 75%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(6) .artigo1-parte-imagem {
+    width: 75%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(7) .artigo1-parte-imagem {
+    width: 85%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(8) .artigo1-parte-imagem {
+    width: 65%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(9) .artigo1-parte-imagem {
+    width: 60%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(10) .artigo1-parte-imagem {
+    width: 85%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(11) .artigo1-parte-imagem {
+    width: 70%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(12) .artigo1-parte-imagem {
+    width: 60%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(13) .artigo1-parte-imagem {
+    width: 85%;
+  }
+
+  .artigo:first-child>div:nth-child(2)>div:nth-child(14) .artigo1-parte-imagem {
+    width: 65%;
   }
 }
 
@@ -337,10 +448,10 @@ section:nth-child(7) .artigo2-parte-figure>img {
   }
 
   p {
-    font-size: 1.75rem;
+    font-size: 3rem;
   }
 
   .botao-navegacao {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
